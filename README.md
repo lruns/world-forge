@@ -1,2 +1,4 @@
-# world-forge
-The laboratory (forge) of my future interactive book - Лаборатория (кузница) моей будущей интерактивной книги
+# World Forge (Кузница лора книги)
+The laboratory (forge) of my future interactive book / Лаборатория (кузница) моей будущей интерактивной книги
+
+Начнем со стендов по разным кусочкам книги, которые в итоге будут использованы для интерактивной книги и роликов на ютубе (youtube.com/@Lruns) и заметок в тг (t.me/Lruns)
