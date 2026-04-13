@@ -6,10 +6,38 @@
     <title>World Forge - Space Map</title>
   </head>
   <body>
-    <!-- Наш контейнер для UI и canvas -->
     <div id="app"></div>
 
-    <!-- Точка входа для скрипта стенда -->
     <script type="module" src="./main.js"></script>
+
+    <audio id="bg-music" loop>
+      <source src="/assets/music/Mechanical%20flowers.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" class="music-toggle">🎵 Включить эмбиент</button>
+
+    <script>
+      const music = document.getElementById('bg-music');
+      const btn = document.getElementById('music-btn');
+      let isPlaying = false;
+
+      btn.addEventListener('click', () => {
+        if (isPlaying) {
+          music.pause();
+          btn.textContent = '🎵 Включить эмбиент';
+          btn.style.borderColor = '#5dade2';
+          btn.style.color = '#5dade2';
+        } else {
+          // Пытаемся запустить музыку
+          music.play().catch(() => {
+            console.warn('Музыкальный файл не найден! Положи музыку в папку assets.');
+          });
+          btn.textContent = '▶️ Играет';
+          btn.style.borderColor = '#6fe73c';
+          btn.style.color = '#2ec892';
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
   </body>
 </html>
